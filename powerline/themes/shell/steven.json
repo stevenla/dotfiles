@@ -11,7 +11,8 @@
 			"before": "ⓔ  "
 		},
 		"branch": {
-			"before": " "
+			"before": " ",
+      "after": ""
 		}
 	},
 	"segments": {
