@@ -33,7 +33,7 @@
 		},
 		"vim": {
 			"colorscheme": "default",
-			"theme": "default",
+			"theme": "steven",
 			"local_themes": {
 				"cmdwin": "cmdwin",
 				"help": "help",
