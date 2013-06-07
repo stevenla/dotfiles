@@ -15,9 +15,9 @@ set undolevels=1000         " MOAR, MOAR
 "set wrapmargin=0
 
 " Editing behaviors
-set cindent
+"set cindent
 "set autoindent
-"set smartindent             " Smart indentation
+set smartindent             " Smart indentation
 set expandtab               " Space as tabs
 set tabstop=2               " Real tabs are 4 spaces
 set shiftwidth=2            " Autoindent width
@@ -98,6 +98,10 @@ set statusline+=\ \ \ \ \ \ \ \ %P
 syntax on
 colorscheme molokai
 set guifont=Liberation\ Mono\ For\ Powerline:h15
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " Highlighting Modes
 autocmd BufNewFile,BufRead *.json set ft=javascript

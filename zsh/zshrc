@@ -60,6 +60,7 @@ alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
 # virtualenvwrapper
 export WORKON_HOME=~/Projects/env
 source /usr/local/bin/virtualenvwrapper.sh
+VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)

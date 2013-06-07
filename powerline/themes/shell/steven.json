@@ -8,7 +8,7 @@
 			}
 		},
 		"virtualenv": {
-			"before": "ⓔ  "
+			"before": "❖ "
 		},
 		"branch": {
 			"before": " ",
@@ -20,9 +20,9 @@
 			{
 				"name": "hostname"
 			},
-			{
-				"name": "user"
-			},
+      {
+        "name": "user"
+      },
 			{
 				"name": "virtualenv"
 			},
@@ -33,7 +33,10 @@
 				}
 			},
       {
-        "name": "branch"
+        "name": "branch",
+        "args": {
+          "status_colors": true
+        }
       }
 		],
 		"right": [
