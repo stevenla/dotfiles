@@ -18,7 +18,7 @@ echo "Linked tmux config!" &&
 ( rm -f ~/.config/powerline && ln -s $PWD/powerline/config ~/.config/powerline) &&
 echo "Linked powerline!" &&
 
-( ./powerline/powerline setup.py install --user) &&
+( ./powerline/powerline/setup.py install --user) &&
 echo "Installed powerline!" &&
 
 echo "Successfully installed dotfiles!" ||
