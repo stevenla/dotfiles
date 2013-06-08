@@ -1,5 +1,5 @@
 export DOTFILES=$HOME/.dotfiles
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.local/bin:$PATH
 
 # Source powerline
 . $DOTFILES/powerline/powerline/powerline/bindings/zsh/powerline.zsh
