@@ -2,21 +2,24 @@
 
 $PWD=$(pwd)
 
-echo "Initializing git submodules..." &&
 ( git submodule init && git submodule update ) &&
+echo "Initialized git submodules!" &&
 
-echo "Linking vim config..." &&
 ( rm -f ~/.vimrc && ln -s $PWD/vim/vimrc ~/.vimrc ) &&
 ( rm -f ~/.vim && ln -s $PWD/vim ~/.vim ) &&
+echo "Linked vim config!" &&
 
-echo "Linking zsh config..." &&
 ( rm -f ~/.zshrc && ln -s $PWD/zsh/zshrc ~/.zshrc ) &&
+echo "Linked zsh config!" &&
 
-echo "Linking tmux config..." &&
 ( rm -f ~/.tmux.conf && ln -s $PWD/tmux/tmux.conf ~/.tmux.conf) &&
+echo "Linked tmux config!" &&
 
-echo "Linking powerline..." &&
-( rm -f ~/.config/powerline && ln -s $PWD/powerline ~/.config/powerline) &&
+( rm -f ~/.config/powerline && ln -s $PWD/powerline/config ~/.config/powerline) &&
+echo "Linked powerline!" &&
+
+( ./powerline/powerlin setup.py install --user) &&
+echo "Installed powerline!" &&
 
 echo "Successfully installed dotfiles!" ||
 echo "Install failed"

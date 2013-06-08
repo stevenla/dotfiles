@@ -29,7 +29,8 @@
 			{
 				"name": "cwd",
 				"args": {
-					"dir_limit_depth": 2
+					"dir_limit_depth": 2,
+          "use_path_separator": true
 				}
 			},
       {
