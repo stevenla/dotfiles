@@ -26,6 +26,9 @@ alias copy="tmux saveb - | pbcopy"
 alias serve="python -m SimpleHTTPServer"
 alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
 
+# ls colors
+alias ls="ls -G"
+
 # virtualenvwrapper
 export WORKON_HOME=~/Projects/env
 source /usr/local/bin/virtualenvwrapper.sh
