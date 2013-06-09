@@ -15,13 +15,5 @@ echo "Linked zsh config!" &&
 ( rm -f ~/.tmux.conf && ln -s $PWD/tmux/tmux.conf ~/.tmux.conf) &&
 echo "Linked tmux config!" &&
 
-( rm -f ~/.config/powerline && ln -s $PWD/powerline/config ~/.config/powerline) &&
-echo "Linked powerline!" &&
-
-( pushd ./powerline/powerline &&
-  ./setup.py install --user &&
-  popd) &&
-echo "Installed powerline!" &&
-
 echo "Successfully installed dotfiles!" ||
 echo "Install failed"
