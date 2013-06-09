@@ -3,6 +3,11 @@
 " Pathogen for installing plugins into ~/.vim/bundles
 call pathogen#infect()
 
+" Use fancy symbols for powerline
+" TODO: these symbols are shit because of old powerline. maybe fork it and
+" replace????
+"let g:Powerline_symbols = 'fancy'
+
 " General options
 set hidden
 set nocompatible
@@ -98,10 +103,6 @@ set statusline+=\ \ \ \ \ \ \ \ %P
 syntax on
 colorscheme molokai
 set guifont=Liberation\ Mono\ For\ Powerline:h15
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 
 " Highlighting Modes
 autocmd BufNewFile,BufRead *.json set ft=javascript
