@@ -9,7 +9,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # time that oh-my-zsh is loaded.
 ZSH_THEME="powerline"
 
-plugins=(git)
+plugins=(git virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,10 +21,6 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local
 #. $DOTFILES/powerline/powerline/powerline/bindings/zsh/powerline.zsh
 
 # Only want cool features of omz
-
-# Dunno what this does actually
-autoload -U compinit
-compinit -C
 
 # Tunlr on/off
 alias tunlron="sudo networksetup -setdnsservers Wi-Fi 149.154.158.186, 199.167.30.144"
