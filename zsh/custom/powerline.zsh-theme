@@ -41,12 +41,6 @@ fi
 
 local PROMPT_DIR="%K{$C_GRAY4}$PL_HARD %F{$C_GRAY9}%c %F{$C_GRAY4}"
 
-# Get virtual env only when active
-if [ ! -z "$VIRTUAL_ENV" ]
-then
-  local PROMPT_VENV="%K{$C_DARKCYAN}$PL_HARD %F{$C_WHITE}$PL_VENV $(basename $VIRTUAL_ENV) %F{$C_DARKCYAN}"
-fi
-
 local PROMPT_END="%k$PL_HARD %f%k"
 
 PROMPT='$PROMPT_HOST$PROMPT_USER$(virtualenv_prompt_info)$PROMPT_DIR$(git_prompt_info)$PROMPT_END'
