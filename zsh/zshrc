@@ -27,7 +27,7 @@ alias tunlron="sudo networksetup -setdnsservers Wi-Fi 149.154.158.186, 199.167.3
 alias tunlroff="sudo networksetup -setdnsservers Wi-Fi"
 
 # tmux copy save buffer to pasteboard
-alias copy="tmux saveb - | pbcopy"
+alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
 
 # Python debugging servers
 alias serve="python -m SimpleHTTPServer"
