@@ -1,6 +1,6 @@
 #! /bin/bash
 
-$PWD=$(pwd)
+PWD=$(pwd)
 
 ( git submodule init && git submodule update ) &&
 echo "Initialized git submodules!" &&
