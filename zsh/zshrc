@@ -9,7 +9,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # time that oh-my-zsh is loaded.
 ZSH_THEME="powerline"
 
-plugins=(git virtualenv)
+plugins=(git virtualenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
