@@ -6,7 +6,7 @@ PWD=$(pwd)
 echo "Initialized git submodules!" &&
 
 ( rm -f ~/.vimrc && ln -s $PWD/vim/vimrc ~/.vimrc ) &&
-( rm -f ~/.vim && ln -s $PWD/vim ~/.vim ) &&
+( rm -rf ~/.vim && ln -s $PWD/vim ~/.vim ) &&
 echo "Linked vim config!" &&
 
 ( rm -f ~/.zshrc && ln -s $PWD/zsh/zshrc ~/.zshrc ) &&
