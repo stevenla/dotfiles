@@ -15,12 +15,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.local/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.local/bin:$PATH
 
 # Source powerline
 #. $DOTFILES/powerline/powerline/powerline/bindings/zsh/powerline.zsh
 
-# Only want cool features of omz
+# Battery
+alias battery="ioreg -l | grep -i capacity | tr '\n' ' | ' | awk '{printf(\"%.0f%%\", \$10/\$5 * 100)}'"
 
 # Tunlr on/off
 alias tunlron="sudo networksetup -setdnsservers Wi-Fi 149.154.158.186, 199.167.30.144"
