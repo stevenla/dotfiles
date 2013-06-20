@@ -40,7 +40,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
