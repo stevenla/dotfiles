@@ -7,7 +7,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+ZSH_THEME="better_kardan"
 
 plugins=(git virtualenv zsh-syntax-highlighting)
 
@@ -16,6 +16,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.local/bin:$PATH
+
+export LANG=en_US.utf8
 
 # Source powerline
 #. $DOTFILES/powerline/powerline/powerline/bindings/zsh/powerline.zsh
@@ -29,6 +31,7 @@ alias tunlroff="sudo networksetup -setdnsservers Wi-Fi"
 
 # tmux copy save buffer to pasteboard
 alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
+
 
 # Python debugging servers
 alias serve="python -m SimpleHTTPServer"

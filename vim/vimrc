@@ -24,9 +24,9 @@ set undolevels=1000         " MOAR, MOAR
 "set autoindent
 set smartindent             " Smart indentation
 set expandtab               " Space as tabs
-set tabstop=2               " Real tabs are 4 spaces
-set shiftwidth=2            " Autoindent width
-set softtabstop=2           " When <BS>, remove this many spaces
+set tabstop=4               " Real tabs are 4 spaces
+set shiftwidth=4            " Autoindent width
+set softtabstop=4           " When <BS>, remove this many spaces
 set showcmd                 " show currently input commands
 set cursorline              " highlight current line
 
