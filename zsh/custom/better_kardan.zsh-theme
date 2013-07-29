@@ -19,7 +19,7 @@ function get_host {
     fi
 }
 
-PROMPT='$(get_left_color)› %{$reset_color%}'
+PROMPT='$(get_left_color)› %f%k'
 RPROMPT='%F{244}%~$(git_prompt_info)$(virtualenv_prompt_info)$(get_host)'
 
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX=" « "
