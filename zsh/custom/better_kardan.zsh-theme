@@ -2,29 +2,32 @@
 # Customized by steven la <mrstevenla@gmail.com>
 
 # Colors yanked from powerline
+#
+local C_YEL="%{$fg[yellow]%}"
+local C_RED="%{$fg[red]%}"
+local C_BLUE="%{$fg[blue]%}"
+local C_D_GRAY="%F{240}"
+
+local DIV="$C_D_GRAY«"
 
 function get_left_color {
     if [ "$(whoami)" = "root" ]
     then
-        echo "%F{160}"
-    else
-        echo "%F{244}"
-    fi
-}
-
-function get_host {
-    if [ -n "$SSH_CLIENT" ]
+        echo "$C_RED"
+    elif [ -n "$SSH_CLIENT" ]
     then
-        echo " « @"`hostname`''
+        echo "$C_BLUE"
+    else
+        echo "%f"
     fi
 }
 
-PROMPT='$(get_left_color)› %f%k'
-RPROMPT='%F{244}%~$(git_prompt_info)$(virtualenv_prompt_info)$(get_host)'
+PROMPT='$(get_left_color) › %f%k'
+RPROMPT='%~$(git_prompt_info)$(virtualenv_prompt_info)'
 
-ZSH_THEME_VIRTUALENV_PROMPT_PREFIX=" « "
+ZSH_THEME_VIRTUALENV_PROMPT_PREFIX=" $C_BLUE"
 ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX=""
 
-ZSH_THEME_GIT_PROMPT_DIRTY="*"
-ZSH_THEME_GIT_PROMPT_PREFIX=" « "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY="$C_RED*$C_YEL"
+ZSH_THEME_GIT_PROMPT_PREFIX=" $C_YEL("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%f"
