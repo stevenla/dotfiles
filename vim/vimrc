@@ -24,6 +24,7 @@ set shiftwidth=4            " Autoindent width
 set softtabstop=4           " When <BS>, remove this many spaces
 set showcmd                 " show currently input commands
 set cursorline              " highlight current line
+set autoread                " auto reload file changes
 
 " Searching behaviors
 set ignorecase              " ignore case in search
