@@ -98,10 +98,14 @@ set statusline+=\ \ \ \ \ \ \ \ %P
 syntax on
 colorscheme smyck
 let g:solarized_termcolors=256
-set guifont=Liberation\ Mono\ For\ Powerline:h15
+"set guifont=Liberation\ Mono\ For\ Powerline:h15
 
 " Highlighting Modes
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" CSS3 vendor prefix highlighting
+highlight VendorPrefix guifg=#00ffff gui=bold
+match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
 
 " gVim settings
 if has('gui_running')
