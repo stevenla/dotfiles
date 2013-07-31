@@ -96,9 +96,7 @@ set statusline+=\ \ \ \ \ \ \ \ %P
 
 " Syntax Coloring
 syntax on
-colorscheme smyck
-let g:solarized_termcolors=256
-"set guifont=Liberation\ Mono\ For\ Powerline:h15
+colorscheme molokai
 
 " Highlighting Modes
 autocmd BufNewFile,BufRead *.json set ft=javascript
@@ -110,6 +108,7 @@ match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
 " gVim settings
 if has('gui_running')
   colorscheme Peacock
+  set guifont=Liberation\ Mono:h15
   set linespace=1
   set lines=50
   set columns=100
@@ -128,6 +127,15 @@ if has('gui_running')
   map <D-7> 7gt
   map <D-8> 8gt
   map <D-9> 9gt
+  imap <D-1> <esc>1gt
+  imap <D-2> <esc>2gt
+  imap <D-3> <esc>3gt
+  imap <D-4> <esc>4gt
+  imap <D-5> <esc>5gt
+  imap <D-6> <esc>6gt
+  imap <D-7> <esc>7gt
+  imap <D-8> <esc>8gt
+  imap <D-9> <esc>9gt
 endif
 
 " Stop F1 from calling help
