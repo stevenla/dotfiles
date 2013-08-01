@@ -6,4 +6,4 @@ Steven La <mrstevenla@gmail.com>
 
     ./install.sh
 
-That's actually it. Hopefully... There may be issues with PATH variables and where powerline gets installed to.
+That's actually it. Hopefully...
