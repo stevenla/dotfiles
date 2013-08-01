@@ -17,13 +17,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/.local/bin:$PATH
 
-# Tunlr on/off
-alias tunlron="sudo networksetup -setdnsservers Wi-Fi 149.154.158.186, 199.167.30.144"
-alias tunlroff="sudo networksetup -setdnsservers Wi-Fi"
-
 # tmux copy save buffer to pasteboard
 alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
-
 
 # Python debugging servers
 alias serve="python -m SimpleHTTPServer"
@@ -33,6 +28,9 @@ alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
 export WORKON_HOME=~/Projects/env
 source /usr/local/bin/virtualenvwrapper.sh 2>/dev/null
 VIRTUAL_ENV_DISABLE_PROMPT=true
+
+# Vundle install
+alias vundle='vim +BundleInstall +qall'
 
 # Java
 #export JAVA_HOME=$(/usr/libexec/java_home)
