@@ -15,5 +15,8 @@ echo "Linked zsh config!" &&
 ( rm -f ~/.tmux.conf && ln -s $PWD/tmux/tmux.conf ~/.tmux.conf) &&
 echo "Linked tmux config!" &&
 
+( vim +BundleInstall +qall ) &&
+echo "Installed Vundles!" &&
+
 echo "Successfully installed dotfiles!" ||
 echo "Install failed"

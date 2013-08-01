@@ -1,5 +1,23 @@
 " Steven La <mrstevenla@gmail.com>
 
+" Vundle init
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'groenewege/vim-less'
+filetype plugin indent on
+
+" Airline config
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='badwolf'
+
 " General options
 set hidden
 set nocompatible
