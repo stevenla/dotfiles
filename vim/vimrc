@@ -19,6 +19,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 
+" Color schemes
+Bundle 'sjl/badwolf'
+Bundle 'altercation/vim-colors-solarized'
+
 " Misc
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
