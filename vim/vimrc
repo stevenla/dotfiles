@@ -1,8 +1,5 @@
 " Steven La <mrstevenla@gmail.com>
 
-" Pathogen for installing plugins into ~/.vim/bundles
-call pathogen#infect()
-
 " General options
 set hidden
 set nocompatible
