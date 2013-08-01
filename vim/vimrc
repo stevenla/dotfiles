@@ -1,90 +1,124 @@
 " Steven La <mrstevenla@gmail.com>
 
-" Vundle init
+" ----------------------------------------------------------------------------
+"  Vundle
+" ----------------------------------------------------------------------------
+
+" Required setup
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
+
+" Editing
 Bundle 'tomtom/tcomment_vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
+
+" Syntax highlighting
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
+
+" Misc
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+
 filetype plugin indent on
 
-" Airline config
+" ----------------------------------------------------------------------------
+"  Plugin setup
+" ----------------------------------------------------------------------------
+
+" Airline settings
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='badwolf'
+let g:airline_theme='powerlineish'
 
-" General options
+" CSS3 vendor prefix highlighting
+highlight VendorPrefix guifg=#00ffff gui=bold
+match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
+
+" Highlighting Modes
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" ----------------------------------------------------------------------------
+"  General settings
+" ----------------------------------------------------------------------------
+
+" Backup Options
+set nobackup
+set noswapfile
+
 set hidden
-set nocompatible
-set encoding=utf-8
-set mouse=a
-set history=1000            " I have the room for this
-set undolevels=1000         " MOAR, MOAR
-"set textwidth=79            " AUTOMATIC WORD WRAP BITCHEZ
-"set formatoptions+=t
-"set wrapmargin=0
 
-" Editing behaviors
+" ----------------------------------------------------------------------------
+"  Editing behavior
+" ----------------------------------------------------------------------------
+
+" Indentation
 "set cindent
 "set autoindent
 set smartindent             " Smart indentation
+
+" Tabs
 set expandtab               " Space as tabs
 set tabstop=4               " Real tabs are 4 spaces
 set shiftwidth=4            " Autoindent width
 set softtabstop=4           " When <BS>, remove this many spaces
+
 set showcmd                 " show currently input commands
-set cursorline              " highlight current line
 set autoread                " auto reload file changes
 
-" Searching behaviors
-set ignorecase              " ignore case in search
-set incsearch               " incremental search
-set hlsearch                " highlight search results
-set smartcase               " ignore case when lowercase
+set pastetoggle=<leader>p   " Toggle pasting mode
 
-" Stops NERDCommenter from bothering me, will find out what it does later
-filetype plugin on
+" ----------------------------------------------------------------------------
+"  Visual & interface options
+" ----------------------------------------------------------------------------
+
+syntax on
+colorscheme molokai
+set mouse=a
+
+set ttyfast			        " fast redrawing
+set scrolloff=6             " have context lines when scrolling
+set cursorline              " highlight current line
+
+set title                   " Change terminal title
+set number                  " Show line numbers
+set numberwidth=4           " Handles numbers up to 99999
+
+set laststatus=2            " Enable statusbar (even for airline)
+set statusline=%f\          " tail of the filename
+set statusline+=%m%r%h%w
+set statusline+=%=          " right align
+set statusline+=%l,%c       " line,col
+set statusline+=\ \ \ \ \ \ \ \ %P
+
+" ----------------------------------------------------------------------------
+"  Movement & searching behaviors
+" ----------------------------------------------------------------------------
 
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
 nnoremap k gk
 
-" Make Y behave like other capitals
+set nostartofline           " cursor in same column in movement
 
-" Tab behaviors
-map <leader>n :tabedit<CR>
-map <leader>w :tabclose<CR>
-map <leader>1 1gt
-imap <leader>1 1gt
-map <leader>2 2gt
-map <leader>3 3gt
-map <leader>4 4gt
-map <leader>5 5gt
-map <leader>6 6gt
-map <leader>7 7gt
-map <leader>8 8gt
-map <leader>9 9gt
+" Search
+set ignorecase              " ignore case in search
+set incsearch               " incremental search
+set hlsearch                " highlight search results
+set smartcase               " ignore case when lowercase
 
-" Maps
-map Y y$
-nnoremap ; :
-vnoremap ; :
-nmap <leader>s :source $MYVIMRC
-nmap <leader>e :NERDTree<CR>
-set pastetoggle=<leader>p   " Toggle pasting mode
-nmap <leader>h :set hlsearch! hlsearch?
-                            " Toggle search highlight
+" General options
+set nocompatible
+set encoding=utf-8
+set history=1000            " I have the room for this
+set undolevels=1000         " MOAR, MOAR
 
-" Can't let go of shift quick enough? NO PROBLEM.
-:command Q q
-:command W w
-:command Wq wq
-:command WQ wq
+" ----------------------------------------------------------------------------
+"  Keyboard convenience
+" ----------------------------------------------------------------------------
 
 " Easier window navigation
 map <C-h> <C-w>h
@@ -92,36 +126,22 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Backup Options
-set nobackup
-set noswapfile
+" Maps
+map <F1> <nop>
+map Y y$
+nnoremap ; :
+vnoremap ; :
 
-" Display Options
-set scrolloff=6             " have context lines when scrolling
-set number                  " Show line numbers
-set numberwidth=4           " Handles numbers up to 99999
-set title                   " Change terminal title
+" Can't let go of shift quick enough? NO PROBLEM.
+:command Q q
+:command W w
+:command Wq wq
+:command WQ wq
 
-" Status line
-set laststatus=2            " Enable statusbar line
-set statusline=%f\          " tail of the filename
-set statusline+=%m%r%h%w
-set statusline+=%=          " right align
-set statusline+=%l,%c       " line,col
-set statusline+=\ \ \ \ \ \ \ \ %P
+" ----------------------------------------------------------------------------
+"  gVim settings
+" ----------------------------------------------------------------------------
 
-" Syntax Coloring
-syntax on
-colorscheme molokai
-
-" Highlighting Modes
-autocmd BufNewFile,BufRead *.json set ft=javascript
-
-" CSS3 vendor prefix highlighting
-highlight VendorPrefix guifg=#00ffff gui=bold
-match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
-
-" gVim settings
 if has('gui_running')
   colorscheme Peacock
   set guifont=Liberation\ Mono:h15
@@ -133,6 +153,7 @@ if has('gui_running')
   set guioptions-=L         " Scrollbars are for squares
   set guioptions-=R         " That's what the % is for guys cmon
   set guioptions-=T         " Disable toolbar, who needs it anyway
+
   " MacVim Tab behaviors
   map <D-1> 1gt
   map <D-2> 2gt
@@ -154,5 +175,3 @@ if has('gui_running')
   imap <D-9> <esc>9gt
 endif
 
-" Stop F1 from calling help
-map <F1> <nop>
