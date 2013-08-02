@@ -22,7 +22,7 @@ function get_left_color {
     fi
 }
 
-PROMPT='$(get_left_color) › %f%k'
+PROMPT='$(get_left_color) › %{$reset_color%}'
 RPROMPT='%3~$(git_prompt_info)$(virtualenv_prompt_info)'
 
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX=" $C_BLUE"
