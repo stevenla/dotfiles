@@ -12,6 +12,7 @@ ZSH_THEME="better_kardan"
 plugins=(git virtualenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshrc_local
 
 # Customize to your needs...
 

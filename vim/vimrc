@@ -155,7 +155,7 @@ if has('gui_running')
   colorscheme molokai
   let g:airline_theme='powerlineish'
 
-  set guifont=Liberation\ Mono:h15
+  set guifont=Source\ Code\ Pro:h15
   set linespace=1
   set lines=50
   set columns=100
