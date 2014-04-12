@@ -12,7 +12,6 @@ ZSH_THEME="better_kardan"
 plugins=(git virtualenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-[[ ( -f $HOME/.zshrc_local ) ]] && source $HOME/.zshrc_local
 
 # Customize to your needs...
 
@@ -35,6 +34,10 @@ alias vundle-install='vim +BundleInstall +qall'
 alias vundle-list='vim +BundleList'
 alias vundle-clean='vim +BundleClean +qall'
 
+# Latest node with harmony
+# Requires n
+alias harmony='n use $(n --latest) --harmony'
+
 # Java
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -49,3 +52,5 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+# Local settings should override
+[[ ( -f $HOME/.zshrc_local ) ]] && source $HOME/.zshrc_local
