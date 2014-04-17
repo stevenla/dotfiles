@@ -7,9 +7,9 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="better_kardan"
+ZSH_THEME="joshish"
 
-plugins=(git virtualenv zsh-syntax-highlighting)
+plugins=(git virtualenv-prompt zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

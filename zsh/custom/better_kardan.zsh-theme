@@ -22,11 +22,12 @@ function get_left_color {
     fi
 }
 
-PROMPT='$(get_left_color) › %{$reset_color%}'
-RPROMPT='%3~$(git_prompt_info)$(virtualenv_prompt_info)'
+PROMPT='
+$(get_left_color) › %{$reset_color%}'
+RPROMPT='%3~$(virtualenv_prompt_info)$(git_prompt_info)'
 
-ZSH_THEME_VIRTUALENV_PROMPT_PREFIX=" $C_BLUE"
-ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX=""
+ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX=" $C_BLUE<"
+ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX=">"
 
 ZSH_THEME_GIT_PROMPT_DIRTY="$C_RED*$C_YEL"
 ZSH_THEME_GIT_PROMPT_PREFIX=" $C_YEL("
