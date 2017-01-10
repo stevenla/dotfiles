@@ -2,8 +2,7 @@
 
 PWD=$(pwd)
 
-( git submodule init && git submodule update ) &&
-echo "Initialized git submodules!" &&
+( git clone https://github.com/robbyrussell/oh-my-zsh.git $PWD/zsh/oh-my-zsh) &&
 
 ( rm -f ~/.vimrc && ln -s $PWD/vim/vimrc ~/.vimrc ) &&
 ( rm -rf ~/.vim && ln -s $PWD/vim ~/.vim ) &&
