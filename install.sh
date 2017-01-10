@@ -3,6 +3,7 @@
 PWD=$(pwd)
 
 ( git clone https://github.com/robbyrussell/oh-my-zsh.git $PWD/zsh/oh-my-zsh) &&
+( git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PWD/zsh/custom/plugins/zsh-syntax-highlighting) &&
 
 ( rm -f ~/.vimrc && ln -s $PWD/vim/vimrc ~/.vimrc ) &&
 ( rm -rf ~/.vim && ln -s $PWD/vim ~/.vim ) &&
