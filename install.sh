@@ -7,6 +7,8 @@ PWD=$(pwd)
 ( rm -f ~/.config/fish/fishfile && ln -s $PWD/fish/fishfile ~/.config/fish/fishfile ) &&
 echo "Installed fisherman!" &&
 
+( git clone https://github.com/robbyrussell/oh-my-zsh.git $PWD/zsh/oh-my-zsh) &&
+( git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PWD/zsh/custom/plugins/zsh-syntax-highlighting) &&
 ( rm -f ~/.zshrc && ln -s $PWD/zsh/zshrc ~/.zshrc ) &&
 echo "Linked zsh config!" &&
 
