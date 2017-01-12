@@ -9,7 +9,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # time that oh-my-zsh is loaded.
 ZSH_THEME="joshish"
 
-plugins=(git virtualenv-prompt zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,19 +24,10 @@ alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
 alias serve="python -m SimpleHTTPServer"
 alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
 
-# virtualenvwrapper
-export WORKON_HOME=~/.env
-source /usr/local/bin/virtualenvwrapper.sh 2>/dev/null
-VIRTUAL_ENV_DISABLE_PROMPT=true
-
 # Vundle
 alias vundle-install='vim +BundleInstall +qall'
 alias vundle-list='vim +BundleList'
 alias vundle-clean='vim +BundleClean +qall'
-
-# Latest node with harmony
-# Requires n
-alias harmony='n use $(n --latest) --harmony'
 
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
