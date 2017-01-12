@@ -1,17 +1,11 @@
 # Aether zsh prompt
 # Steven La (stevenla.com)
-#
+
 function colorize {
-    # colorize red hello
-    # colorize red hello no-suffix
-    echo -n "%F{$1}$2"
-    [[ -z $3 ]] && echo -n "%{$reset_color%}"
-}
-
-function get_left_prompt {
-}
-
-function get_right_prompt {
+  # colorize red hello
+  # colorize red hello no-suffix
+  echo -n "%F{$1}$2"
+  [[ -z $3 ]] && echo -n "%{$reset_color%}"
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX=$(colorize yellow " (" no-suffix)
