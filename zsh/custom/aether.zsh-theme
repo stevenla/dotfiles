@@ -14,7 +14,7 @@ function get_left_prompt {
 function get_right_prompt {
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX=$(colorize yellow " (" skip)
+ZSH_THEME_GIT_PROMPT_PREFIX=$(colorize yellow " (" no-suffix)
 ZSH_THEME_GIT_PROMPT_SUFFIX=$(colorize yellow ")")
 ZSH_THEME_GIT_PROMPT_DIRTY=$(colorize red "•")
 ZSH_THEME_GIT_PROMPT_CLEAN=""
@@ -29,4 +29,4 @@ $(git_prompt_info)\
 $(colorize 240 "\n› ")\
 '
 
-RPROMPT=$(colorize "%(?.240.red)" $(date "+%H:%M"))
+RPROMPT=$(colorize "%(?.240.red)" $(date "+%k:%M%n"))
