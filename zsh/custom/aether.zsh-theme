@@ -9,18 +9,9 @@ function colorize {
 }
 
 function get_left_prompt {
-    echo -n '\n'
-    colorize cyan "%n"
-    echo -n '@'
-    colorize blue "%m"
-    echo -n ':'
-    colorize green "%~"
-    git_prompt_info
-    echo -n "\n › "
 }
 
 function get_right_prompt {
-    colorize '%(?.240.red)' $(date "+%H:%M")
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX=$(colorize yellow " (" skip)
@@ -28,5 +19,14 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=$(colorize yellow ")")
 ZSH_THEME_GIT_PROMPT_DIRTY=$(colorize red "•")
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-PROMPT=$(get_left_prompt)
-RPROMPT=$(get_right_prompt)
+PROMPT='
+$(colorize cyan "%n")\
+$(colorize 240 "@")\
+$(colorize blue "%m")\
+$(colorize 240 " ")\
+$(colorize green "%~")\
+$(git_prompt_info)\
+$(colorize 240 "\n› ")\
+'
+
+RPROMPT=$(colorize "%(?.240.red)" $(date "+%H:%M"))
