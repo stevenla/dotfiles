@@ -17,7 +17,7 @@ PROMPT='
 $(colorize cyan "%n")\
 $(colorize 240 "@")\
 $(colorize blue "%m")\
-$(colorize 240 " ")\
+$(colorize 240 ":")\
 $(colorize green "%~")\
 $(git_prompt_info)\
 $(colorize 240 "\n› ")\
