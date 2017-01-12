@@ -29,4 +29,4 @@ $(git_prompt_info)\
 $(colorize 240 "\n› ")\
 '
 
-RPROMPT=$(colorize "%(?.240.red)" "%D{%k:%M}")
+RPROMPT=$(colorize "%(?.240.red)" "%D{%-I:%M %p}")
