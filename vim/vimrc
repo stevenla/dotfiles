@@ -87,7 +87,7 @@ set pastetoggle=<leader>p   " Toggle pasting mode
 " ----------------------------------------------------------------------------
 
 syntax on
-colorscheme peacocks-in-space
+colorscheme noctu
 set mouse=a
 
 set ttyfast			        " fast redrawing
