@@ -11,9 +11,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" Editing
-Bundle 'tomtom/tcomment_vim'
-
 " Syntax highlighting
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'hail2u/vim-css3-syntax'
@@ -24,8 +21,8 @@ Bundle 'jelera/vim-javascript-syntax'
 " Misc
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'rizzatti/funcoo.vim'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'rizzatti/funcoo.vim'
 "Bundle 'rizzatti/dash.vim' Causes error
 
 filetype plugin indent on
@@ -181,4 +178,3 @@ if has('gui_running')
   imap <D-8> <esc>8gt
   imap <D-9> <esc>9gt
 endif
-
