@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=./node_modules/.bin:$PATH
+#export PATH=./node_modules/.bin:$PATH
 
 # tmux copy save buffer to pasteboard
 alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
