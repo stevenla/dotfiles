@@ -27,6 +27,7 @@ function current_hg_bm() {
   then
     colorize yellow " (" no-suffix
     cat $HG_ROOT/.hg/bookmarks.current
+    [[ -n "$(hg status)" ]] && colorize red "•"
     colorize yellow ")"
   fi
 }
