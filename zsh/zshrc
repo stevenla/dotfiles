@@ -39,9 +39,3 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-
-# Redraw the prompt every TMOUT seconds
-TMOUT=10
-TRAPALRM() {
-	zle reset-prompt
-}
