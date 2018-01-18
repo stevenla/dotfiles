@@ -13,6 +13,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'othree/yajs.vim'
 
+call plug#end()
+
 filetype plugin indent on
 
 " ----------------------------------------------------------------------------
@@ -22,14 +24,6 @@ filetype plugin indent on
 " Airline settings
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-"let g:airline_theme='powerlineish'
-
-" CSS3 vendor prefix highlighting
-highlight VendorPrefix guifg=#00ffff gui=bold
-match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
-
-" Highlighting Modes
-autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " ----------------------------------------------------------------------------
 "  General settings
@@ -128,41 +122,3 @@ vnoremap ; :
 :command Wq wq
 :command WQ wq
 
-" ----------------------------------------------------------------------------
-"  gVim settings  -- should be in gvimrc
-" ----------------------------------------------------------------------------
-
-if has('gui_running')
-  colorscheme molokai
-  let g:airline_theme='powerlineish'
-
-  set guifont=Source\ Code\ Pro:h15
-  set linespace=1
-  set lines=50
-  set columns=100
-  set guioptions-=l         " Disable all scrollbars.
-  set guioptions-=r         " Nice and minimal
-  set guioptions-=L         " Scrollbars are for squares
-  set guioptions-=R         " That's what the % is for guys cmon
-  set guioptions-=T         " Disable toolbar, who needs it anyway
-
-  " MacVim Tab behaviors
-  map <D-1> 1gt
-  map <D-2> 2gt
-  map <D-3> 3gt
-  map <D-4> 4gt
-  map <D-5> 5gt
-  map <D-6> 6gt
-  map <D-7> 7gt
-  map <D-8> 8gt
-  map <D-9> 9gt
-  imap <D-1> <esc>1gt
-  imap <D-2> <esc>2gt
-  imap <D-3> <esc>3gt
-  imap <D-4> <esc>4gt
-  imap <D-5> <esc>5gt
-  imap <D-6> <esc>6gt
-  imap <D-7> <esc>7gt
-  imap <D-8> <esc>8gt
-  imap <D-9> <esc>9gt
-endif
