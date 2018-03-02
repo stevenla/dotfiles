@@ -5,6 +5,7 @@ PWD=$(pwd)
 ( curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher ) &&
 ( rm -f ~/.config/fish/config.fish && ln -s $PWD/fish/config.fish ~/.config/fish/config.fish ) &&
 ( rm -f ~/.config/fish/fishfile && ln -s $PWD/fish/fishfile ~/.config/fish/fishfile ) &&
+( fisher ) &&
 echo "Installed fisherman!" &&
 
 ( git clone https://github.com/robbyrussell/oh-my-zsh.git $PWD/zsh/oh-my-zsh) &&
