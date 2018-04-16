@@ -25,6 +25,6 @@ tmux:
 	rm -f ~/.tmux.conf
 	ln -s `pwd`/tmux/tmux.conf ~/.tmux.conf
 
-all: fish zsh vim tmux
+all: zsh vim tmux
 
 .PHONY: fish zsh vim tmux
