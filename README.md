@@ -4,6 +4,8 @@ Steven La <mrstevenla@gmail.com>
 
 ## Installation
 
-    ./install.sh
+```
+make
+```
 
 That's actually it. Hopefully...
