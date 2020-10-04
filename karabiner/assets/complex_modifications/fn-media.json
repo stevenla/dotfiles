@@ -1,0 +1,62 @@
+{
+  "title": "fn + navigation = media",
+  "rules": [
+    {
+      "description": "fn + PgUp = VolUp",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "page_up", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "volume_increment" } ]
+      } ]
+    },
+    {
+      "description": "fn + PgDn = VolDn",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "page_down", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "volume_decrement" } ]
+      } ]
+    },
+    {
+      "description": "fn + Home = Mute",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "home", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "mute" } ]
+      } ]
+    },
+    {
+      "description": "fn + Help = Play/Pause",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "help", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "play_or_pause" } ]
+      } ]
+    },
+    {
+      "description": "fn + Insert = Play/Pause",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "insert", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "play_or_pause" } ]
+      } ]
+    },
+    {
+      "description": "fn + Delete = Previous",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "delete_forward", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "rewind" } ]
+      } ]
+    },
+    {
+      "description": "fn + End = VolUp",
+      "manipulators": [ {
+          "type": "basic",
+          "from": { "key_code": "end", "modifiers": { "mandatory": [ "fn" ] } },
+          "to": [ { "key_code": "fastforward" } ]
+      } ]
+    }
+  ]
+}
+

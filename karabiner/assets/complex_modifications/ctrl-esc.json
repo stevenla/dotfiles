@@ -1,0 +1,26 @@
+{
+  "title": "Pressing left_control alone maps to escape",
+  "rules": [
+    {
+      "description": "Pressing left_control alone maps to escape",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

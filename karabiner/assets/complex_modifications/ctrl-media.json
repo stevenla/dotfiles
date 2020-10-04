@@ -1,0 +1,96 @@
+{
+  "title": "control + navigation = media",
+  "rules": [
+    {
+      "description": "control + PgUp = VolUp",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_up",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "volume_increment" }]
+        }
+      ]
+    },
+    {
+      "description": "control + PgDn = VolDn",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_down",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "volume_decrement" }]
+        }
+      ]
+    },
+    {
+      "description": "control + Home = Mute",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "home",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "mute" }]
+        }
+      ]
+    },
+    {
+      "description": "control + Help = Play/Pause",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "help",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "play_or_pause" }]
+        }
+      ]
+    },
+    {
+      "description": "control + Insert = Play/Pause",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "insert",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "play_or_pause" }]
+        }
+      ]
+    },
+    {
+      "description": "control + Delete = Previous",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_forward",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "rewind" }]
+        }
+      ]
+    },
+    {
+      "description": "control + End = VolUp",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "end",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "fastforward" }]
+        }
+      ]
+    }
+  ]
+}
