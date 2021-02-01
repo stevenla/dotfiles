@@ -1,4 +1,5 @@
 zsh:
+	git submodule update `pwd`/zsh/zsh-snap
 	rm -f ~/.zshrc
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
