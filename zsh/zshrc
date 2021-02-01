@@ -1,9 +1,14 @@
-# Path to your oh-my-zsh configuration.
+# ======================================================================
+# Znap install
+# ======================================================================
+
 DOTFILES=$HOME/.dotfiles
-
 zstyle ':znap:*' plugins-dir $DOTFILES/zsh/plugins
-
 source $DOTFILES/zsh/zsh-snap/znap.zsh
+
+# ======================================================================
+# Plugins
+# ======================================================================
 
 znap source ohmyzsh/ohmyzsh lib/completion plugins/git
 znap source zsh-users/zsh-completions
@@ -12,7 +17,32 @@ znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-autosuggestions
 znap source woefe/git-prompt.zsh
 
+znap prompt aether-zsh-theme
+
+# ======================================================================
+# Plugin Configuration
+# ======================================================================
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-znap prompt aether-zsh-theme
+# ======================================================================
+# Helpful aliases
+# ======================================================================
+
+# tmux copy save buffer to pasteboard
+alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
+
+# Python debugging servers
+alias serve="python -m SimpleHTTPServer"
+alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
+
+# Vundle
+alias vundle-install='vim +BundleInstall +qall'
+alias vundle-list='vim +BundleList'
+alias vundle-clean='vim +BundleClean +qall'
+
+# ls colors
+alias ls="ls -G"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
