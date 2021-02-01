@@ -22,13 +22,6 @@
 # \e[2K => clear everything on the current line
 
 
-function colorize {
-  # colorize red hello
-  # colorize red hello no-suffix
-  echo -n "%F{$1}$2"
-  [[ -z $3 ]] && echo -n "%f"
-}
-
 function hg_root() {
   local DIR=$(pwd)
   while [[ "$DIR" != "/" ]];
@@ -68,9 +61,9 @@ ZSH_THEME_GIT_PROMPT_AHEAD="↑"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[red]%}✖"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}●"
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[red]%}✚"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{red}…"
 ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[blue]%}⚑"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green}✔"
 
 PROMPT='
 %F{cyan}%n\
