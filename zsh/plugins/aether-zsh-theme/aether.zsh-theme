@@ -21,31 +21,6 @@
 # \e[K  => clears everything after the cursor on the current line
 # \e[2K => clear everything on the current line
 
-
-function hg_root() {
-  local DIR=$(pwd)
-  while [[ "$DIR" != "/" ]];
-  do
-    if [[ -a "$DIR/.hg" ]];
-    then
-      echo -n "$DIR"
-      break
-    fi
-    local DIR=$(dirname $DIR)
-  done
-}
-
-function current_hg_bm() {
-  local HG_ROOT=$(hg_root)
-  if [[ -n "$HG_ROOT" && -a "$HG_ROOT/.hg/bookmarks.current" ]];
-  then
-    colorize yellow " (" no-suffix
-    cat $HG_ROOT/.hg/bookmarks.current
-    [[ -n "$(hg status)" ]] && colorize red "•"
-    colorize yellow ")"
-  fi
-}
-
 ZSH_GIT_PROMPT_SHOW_UPSTREAM="no"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %F{yellow}("
