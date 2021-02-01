@@ -29,6 +29,9 @@ alias vundle-install='vim +BundleInstall +qall'
 alias vundle-list='vim +BundleList'
 alias vundle-clean='vim +BundleClean +qall'
 
+# Youtub DL
+alias ytdl-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
+
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
     bg
