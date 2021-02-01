@@ -1,46 +1,18 @@
 # Path to your oh-my-zsh configuration.
 DOTFILES=$HOME/.dotfiles
-ZSH=$DOTFILES/zsh/oh-my-zsh
-ZSH_CUSTOM=$DOTFILES/zsh/custom
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="aether"
+zstyle ':znap:*' plugins-dir $DOTFILES/zsh/plugins
 
-plugins=(git zsh-syntax-highlighting)
+source $DOTFILES/zsh/zsh-snap/znap.zsh
 
-source $ZSH/oh-my-zsh.sh
+znap source ohmyzsh/ohmyzsh lib/completion plugins/git
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+znap source zsh-users/zsh-history-substring-search
+znap source zsh-users/zsh-autosuggestions
+znap source woefe/git-prompt.zsh
 
-# Customize to your needs...
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
-#export PATH=./node_modules/.bin:$PATH
-
-# tmux copy save buffer to pasteboard
-alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
-
-# Python debugging servers
-alias serve="python -m SimpleHTTPServer"
-alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
-
-# Vundle
-alias vundle-install='vim +BundleInstall +qall'
-alias vundle-list='vim +BundleList'
-alias vundle-clean='vim +BundleClean +qall'
-
-# Youtub DL
-alias ytdl-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
-
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    bg
-    zle redisplay
-  else
-    zle push-input
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+znap prompt aether-zsh-theme

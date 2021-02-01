@@ -1,9 +1,5 @@
 zsh:
-	rm -rf `pwd`/zsh/oh-my-zsh
-	rm -rf `pwd`/zsh/custom/plugins/zsh-syntax-highlighting
 	rm -f ~/.zshrc
-	git clone https://github.com/robbyrussell/oh-my-zsh.git `pwd`/zsh/oh-my-zsh
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git `pwd`/zsh/custom/plugins/zsh-syntax-highlighting
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
 vim:

@@ -3,3 +3,4 @@
 vim/plugged
 zsh/oh-my-zsh
 zsh/custom/plugins/zsh-syntax-highlighting
+zsh/plugins/*
