@@ -30,17 +30,15 @@ bindkey '^[[B' history-substring-search-down
 # Helpful aliases
 # ======================================================================
 
+# Path helpers
+alias ..="cd .."
+
 # tmux copy save buffer to pasteboard
 alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
 
 # Python debugging servers
 alias serve="python -m SimpleHTTPServer"
 alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
-
-# Vundle
-alias vundle-install='vim +BundleInstall +qall'
-alias vundle-list='vim +BundleList'
-alias vundle-clean='vim +BundleClean +qall'
 
 # ls colors
 alias ls="ls -G"
