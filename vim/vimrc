@@ -7,8 +7,6 @@
 " Required setup
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'othree/yajs.vim'
