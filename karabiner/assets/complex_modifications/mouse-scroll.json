@@ -38,6 +38,9 @@
               "optional": ["any"]
             }
           },
+          "options": {
+            "momentum_scroll_enabled": false
+          },
           "conditions": [
             {
               "type": "variable_if",

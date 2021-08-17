@@ -33,9 +33,6 @@ bindkey '^[[B' history-substring-search-down
 # Path helpers
 alias ..="cd .."
 
-# tmux copy save buffer to pasteboard
-alias copy="tmux saveb - | reattach-to-user-namespace pbcopy"
-
 # Python debugging servers
 alias serve="python -m SimpleHTTPServer"
 alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
