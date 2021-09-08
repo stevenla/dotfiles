@@ -44,3 +44,15 @@ alias ls="ls -G"
 alias ytdl-mp4='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]"'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# ======================================================================
+# Windows Subsystem for Linux shortcuts
+# ======================================================================
+
+if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+  alias ls='LS_COLORS="ow=01;36;40" && export LS_COLORS && command ls --human-readable --group-directories-first --color=auto -I NTUSER.DAT\* -I ntuser.dat\*'
+  alias pbcopy='clip.exe'
+  alias pbpaste="powershell.exe Get-Clipboard | sed 's/\r$//' | sed -z '$ s/\n$//'"
+  alias open="explorer.exe"
+fi
+ 
