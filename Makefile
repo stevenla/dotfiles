@@ -1,7 +1,7 @@
 zsh:
+	git submodule init `pwd`/zsh/zsh-snap
 	git submodule update `pwd`/zsh/zsh-snap
-	rm -f ~/.zshrc
-	ln -s `pwd`/zsh/zshrc ~/.zshrc
+	echo "source `pwd`/zsh/zshrc" >> ~/.zshrc
 
 vim:
 	rm -f ~/.vimrc
