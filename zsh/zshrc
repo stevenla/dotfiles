@@ -40,10 +40,12 @@ alias maildebug="python -m smtpd -n -c DebuggingServer localhost:1025"
 # ls colors
 alias ls="ls -G"
 
-# Youtube DL MP4 best quality
-alias ytdl-mp4='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]"'
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
 
 # ======================================================================
 # Windows Subsystem for Linux shortcuts
