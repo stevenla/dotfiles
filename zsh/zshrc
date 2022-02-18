@@ -72,6 +72,11 @@ function ffmpeg-resize {
     then extension=$(echo "$1" | sed "s/\(.*\)\.\([^.]*\)$/\2/g")
     else extension="$3"
   fi
-  ffmpeg -i "$1" -vf scale="-1:$2" "$filename.$2.$extension"
+  filters="scale=-2:$2"
+  if [ "$3" = "gif" ]
+  then
+    filters="$filters,fps=30,split[s0][s1];[s0]palettegen=max_colors=128:reserve_transparent=0[p];[s1][p]paletteuse"
+  fi
+  ffmpeg -i "$1" -vf "$filters" "$filename.$2.$extension"
 }
 
