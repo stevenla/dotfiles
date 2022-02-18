@@ -57,4 +57,21 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   alias pbpaste="powershell.exe Get-Clipboard | sed 's/\r$//' | sed -z '$ s/\n$//'"
   alias open="explorer.exe"
 fi
- 
+
+# ======================================================================
+# Helpful functions
+# ======================================================================
+
+# Resizes a video to a certain vertical height
+# $1 = input file path
+# $2 = desired vertical height
+function ffmpeg-resize {
+  filename=$(echo "$1" | sed "s/\(.*\)\.\([^.]*\)$/\1/g")
+  extension="mp4"
+  if [ -z "$3" ]
+    then extension=$(echo "$1" | sed "s/\(.*\)\.\([^.]*\)$/\2/g")
+    else extension="$3"
+  fi
+  ffmpeg -i "$1" -vf scale="-1:$2" "$filename.$2.$extension"
+}
+
