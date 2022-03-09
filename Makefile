@@ -1,7 +1,7 @@
 zsh:
 	git submodule init `pwd`/zsh/zsh-snap
 	git submodule update `pwd`/zsh/zsh-snap
-	echo "[[ \$- == *i* ]] && source `pwd`/zsh/zshrc" >> ~/.zshrc
+	echo "[[ \044- == *i* ]] && source `pwd`/zsh/zshrc" >> ~/.zshrc
 
 vim:
 	rm -f ~/.vimrc
