@@ -65,7 +65,7 @@ fi
 # Resizes a video to a certain vertical height
 # $1 = input file path
 # $2 = desired vertical height
-function ffmpeg-resize {
+function resize {
   filename=$(echo "$1" | sed "s/\(.*\)\.\([^.]*\)$/\1/g")
   extension="mp4"
   if [ -z "$3" ]
