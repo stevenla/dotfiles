@@ -19,8 +19,8 @@ karabiner:
 	ln -s `pwd`/karabiner ~/.config
 
 defaults:
-	defaults write .GlobalPreferences com.apple.mouse.scaling -1
-	defaults write -g ApplePressAndHoldEnabled -bool false
+	defaults write NSGlobalDomain com.apple.mouse.scaling -1
+	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 all: zsh vim tmux
 
