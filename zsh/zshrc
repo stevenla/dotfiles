@@ -42,10 +42,29 @@ alias ls="ls --color=auto"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# ======================================================================
+# General settings
+# ======================================================================
+
 # Appends every command to the history file once it is executed
 setopt inc_append_history
+
 # Reloads the history whenever you use it
 setopt share_history
+
+# Case insensitive globbing
+setopt extendedglob
+unsetopt CASE_GLOB
+unsetopt nomatch
+
+
+# ======================================================================
+# Mac specific settings
+# ======================================================================
+
+if [[ `uname` == "Darwin" ]]; then
+  # TODO
+fi
 
 # ======================================================================
 # Windows Subsystem for Linux shortcuts
@@ -75,7 +94,7 @@ function resize {
   filters="scale=-2:$2"
   if [ "$3" = "gif" ]
   then
-    filters="$filters,fps=30,split[s0][s1];[s0]palettegen=max_colors=128:reserve_transparent=0[p];[s1][p]paletteuse"
+    filters="$filters,fps=30,split[s0][s1];[s0]palettegen=max_colors=256:reserve_transparent=0[p];[s1][p]paletteuse"
   fi
   ffmpeg -i "$1" -vf "$filters" "$filename.$2.$extension"
 }

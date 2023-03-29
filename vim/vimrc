@@ -84,6 +84,10 @@ set statusline+=\ \ \ \ \ \ \ \ %P
 nnoremap j gj
 nnoremap k gk
 
+" I like using H and L for beginning/end of line
+nnoremap H ^
+nnoremap L $
+
 set nostartofline           " cursor in same column in movement
 
 " Search
