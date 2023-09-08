@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'othree/yajs.vim'
+Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 

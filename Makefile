@@ -22,6 +22,9 @@ defaults:
 	defaults write NSGlobalDomain com.apple.mouse.scaling -1
 	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
+update:
+	git submodule update --remote
+
 all: zsh vim tmux
 
 mac: all karabiner defaults

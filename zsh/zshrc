@@ -99,6 +99,12 @@ function resize {
   ffmpeg -i "$1" -vf "$filters" "$filename.$2.$extension"
 }
 
+function video-to-gif {
+  filename=$(echo "$1" | sed "s/\(.*\)\.\([^.]*\)$/\1/g")
+  filters="fps=30,split[s0][s1];[s0]palettegen=max_colors=256:reserve_transparent=0[p];[s1][p]paletteuse"
+  ffmpeg -i "$1" -vf "$filters" "$filename.gif"
+}
+
 # Re-encode a video to a target size in MB.
 # Example:
 #    ./this_script.sh video.mp4 15
